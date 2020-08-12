@@ -1,14 +1,34 @@
 <section id="section-3">
     <h2>Learn more about the founding of our immersive aquarium:</h2>
-    <p>Since the summer of 2000, the aquarium has been dedicated to educating the public on all aspects of marine life and conservation.</p>
+    <p>Since the summer of 2000, the aquarium has been dedicated to educating the public on all aspects of marine life
+        and conservation.</p>
     <p>Each exhibit is designed to promote awareness of the animals, their habitats and conservation.</p>
     <p>We strive to provide our guests with a unique and memorable experience through creative exhibits as well as
         innovative educational and outreach programs.</p>
-    <aside class="yellow-bar"></aside>
-    <h2>Visit us!</h2>
-    <p>22 Ocean Boulevard, Best Beach, NJ 07924</p>
-    <div>
-        <button class="blue-button" onclick="notification()">Directions</button>
+    <aside class="yellow-bar" id="map-section"></aside>
+    <h2>Find your way to our Aquarium!</h2>
+    <!-- Trigger/Open The Modal -->
+    <div id="button-container">
+        <button class="yellow-button" id="myBtn">View Map<i class="fas fa-map-marker-alt"></i></button>
     </div>
-    <p id="response"></p>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div id="text">
+                <span class="close">&times;</span>
+                <h2>Come Visit!</h2>
+                <p>22 Ocean Boulevard</p>
+                <p>Best Beach, New Jersey</p>
+                <p>07924</p>
+                <button id="go-button" class="yellow-button"><a href="https://www.google.com/maps/place/Atlantic+City+Aquarium/@39.3769075,-74.4206003,19z/data=!3m1!4b1!4m5!3m4!1s0x0:0xbf3f8457d555ec45!8m2!3d39.3769065!4d-74.420053" target="_blank">Go<i class="fas fa-directions"></i></a></button>
+            </div>
+            <section id="map-container">
+                <div>
+                    <div id="map"></div>
+                </div>
+            </section>
+        </div>
+    </div>
 </section>

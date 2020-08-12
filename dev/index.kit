@@ -21,6 +21,189 @@
     <!-- @import "section-3.kit" -->
     <!-- @import "footer.kit" -->
 
+
+    <script>
+        function initMap() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 39.376938,
+                    lng: -74.420056
+                },
+                zoom: 12,
+
+                // change to satellite with labels default view
+                // mapTypeId: 'roadmap',
+
+                styles: [
+                    // change to teal geometry
+                    {
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#139ECF'
+                        }]
+                    },
+                     // change to dark blue text stroke
+                    {
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#122F69'
+                        }]
+                    },
+                    // change to yellow text fill
+                    {
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#E9F9FF'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.attraction',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#F9C243'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.park',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#E9F9FF'
+                        }]
+                    },
+                    {
+                        featureType: 'poi.park',
+                        // elementType: 'geometry',
+                        stylers: [{
+                            // color: '#141A02'
+                            visibility: "off"
+                        }]
+                    },
+                    // {
+                    //     featureType: 'poi.park',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#6b9a76'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'geometry',
+                    //     stylers: [{
+                    //         color: '#122F69'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'geometry.stroke',
+                    //     stylers: [{
+                    //         color: '#E9F9FF'
+                    //     }]
+                    // },
+                    // {
+                    //     featureType: 'road',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#9ca5b3'
+                    //     }]
+                    // },
+                    {
+                        // hide hotel
+                        featureType: 'poi.business',
+                        // elementType: 'labels.text.fill',
+                        stylers: [{
+                            visibility: "off"
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#2767C5'
+                        }]
+                    },
+                    {
+                        featureType: 'road.highway',
+                        elementType: 'geometry.stroke',
+                        stylers: [{
+                            color: '#122F69'
+                        }]
+                    },
+                    // {
+                    //     featureType: 'road.highway',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#f3d19c'
+                    //     }]
+                    // },
+                    {
+                        featureType: 'transit',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#122F69'
+                        }]
+                    },
+                    // {
+                    //     featureType: 'transit.station',
+                    //     elementType: 'labels.text.fill',
+                    //     stylers: [{
+                    //         color: '#d59563'
+                    //     }]
+                    // },
+                    {
+                        // change to blue
+                        featureType: 'water',
+                        elementType: 'geometry',
+                        stylers: [{
+                            color: '#122F69'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.fill',
+                        stylers: [{
+                            color: '#E9F9FF'
+                        }]
+                    },
+                    {
+                        featureType: 'water',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{
+                            color: '#122F69'
+                        }]
+                    }
+                ]
+            });
+
+            var myLatLng = {
+                lat: 39.376938,
+                lng: -74.420056
+            };
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP
+                // title: "Hello!"
+            });
+
+            marker.addListener("click", toggleBounce);
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrgc38FmWsOp9oGyoXorMzh62whWUmZk0&callback=initMap">
+    </script>
+
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Greensock ScrollTo Plugin-->

@@ -155,7 +155,7 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dev\/js\/main-nav-click-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -165,7 +165,7 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/dev\/js\/nav-scroll-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -407,10 +407,10 @@
 	},
 "projectAttributes": {
 	"creationDate": 618614130,
-	"displayValue": "web3-notification",
+	"displayValue": "web3-notification 2",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-hart",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "brackets-rose",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1808,7 +1808,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
-	"jsCheckerReservedNamesString": "notification, gsap, ScrollToPlugin, notification",
+	"jsCheckerReservedNamesString": "notification, gsap, ScrollToPlugin",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,
